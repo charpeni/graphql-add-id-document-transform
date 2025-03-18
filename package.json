@@ -1,0 +1,72 @@
+{
+  "name": "graphql-add-id-document-transform",
+  "version": "1.0.0",
+  "description": "GraphQL document transform ensuring cache normalization by adding an `id` field if available",
+  "keywords": [
+    "graphql",
+    "document",
+    "transform",
+    "id",
+    "cache",
+    "normalization"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charpeni/graphql-add-id-document-transform.git"
+  },
+  "license": "MIT",
+  "author": "Nicolas Charpentier <nicolas.charpentier079@gmail.com>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "prepack": "yarn build",
+    "prepare": "husky",
+    "test": "jest",
+    "type-check": "tsc --pretty --noEmit",
+    "check-exports": "attw --pack ."
+  },
+  "lint-staged": {
+    "*.{js,ts,md}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@graphql-codegen/plugin-helpers": "^5.0.0",
+    "graphql": "^16.0.0"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.4",
+    "@eslint/js": "^9.22.0",
+    "@total-typescript/tsconfig": "^1.0.4",
+    "@types/jest": "^29.5.14",
+    "eslint": "^9.22.0",
+    "eslint-plugin-import": "^2.31.0",
+    "expect-type": "^1.2.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.5.0",
+    "prettier": "3.5.3",
+    "ts-jest": "^29.2.6",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1"
+  }
+}
