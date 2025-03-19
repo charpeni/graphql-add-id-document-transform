@@ -1,6 +1,6 @@
 {
   "name": "graphql-add-id-document-transform",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GraphQL document transform ensuring cache normalization by adding an `id` field if available",
   "keywords": [
     "graphql",
