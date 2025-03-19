@@ -23,7 +23,7 @@ GraphQL document transform that ensures cache normalization by automatically que
 ## Installation
 
 ```sh
-npm install graphql-add-id-document-transform
+npm install --dev graphql-add-id-document-transform
 ```
 
 ## Usage
