@@ -1,8 +1,5 @@
-// @ts-check
-
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
-// @ts-expect-error -- no types
 import * as pluginImport from 'eslint-plugin-import';
 
 export default tseslint.config(
